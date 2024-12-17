@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #BAD8F1;
+    overflow: hidden;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.search-container {
+    text-align: center;
+    margin: 10px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 5px;
+    width: 95%;
+    max-width: 400px;
+    height: 40px;
+    position: relative;
+}
+
+.search-icon {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+
+.search-input {
+    flex: 1; 
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.search-button {
+    background-color: #fcefd7;
+    border: none;
+    outline: none;
+    border-radius: 50%; 
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+    .search-button:hover {
+        background-color: #f4dfbf;
+    }
+
+#searchInput {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.info-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 2px;
+}
+
+.info {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s ease;
+}
+
+    .info img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .info:hover {
+        transform: translateY(-5px);
+    }
+
+.navbar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+    .navbar a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%; 
+        transition: background-color 0.3s ease; 
+        position: relative;
+    }
+
+        .navbar a.active {
+            background-color: rgba(173, 216, 230, 0.6); 
+        }
+
+        .navbar a img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .navbar a.active::after {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: rgba(173, 216, 230, 0.3); 
+            z-index: -1; 
+        }
